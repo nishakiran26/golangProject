@@ -1,15 +1,18 @@
-package main
+package handlers
 
 import (
 	"net/http"
+
+	"github.com/nishakiran26/go-learning/pkg/render"
 )
 
 // home is homre page handler
 func Home(w http.ResponseWriter, r *http.Request) {
-	renderTemplate(w, "home_page.html")
+	render.RenderTemplate(w, "home_page.html")
+	//renderTemplate(w, "home_page.html")
 }
 
 // About is the about page handler
 func About(w http.ResponseWriter, r *http.Request) {
-	renderTemplate(w, "about.page.html")
+	render.RenderTemplate(w, "about.page.html")
 }
